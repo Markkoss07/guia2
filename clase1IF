@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int valor, descuento, totalApagar, total;
+
+cout << "Ingresar valor del producto:  ";
+cin >> valor;
+
+if(valor > 25000){
+    //descuento = valor * 10 / 100;
+    //totalApagar = valor - descuento;
+    total = valor * 0.9f;              //la mejor solución, pocas variables//
+
+}else{
+    total = valor;
+    //totalApagar = valor;
+}
+cout << "Tu valor a pagar es: $" << total;
+//cout << "El valor a pagar es: $" << totalApagar;
+
+
+//Estructura de seleccion simple//
+//if(valor > 25000){
+// valor = valor * 0.9f;
+//}
+//cout << "Monto a pagar: $"  << valor;
+return 0;
+}
