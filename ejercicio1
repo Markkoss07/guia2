@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar por teclado un número y luego emitir por
+pantalla un cartel aclaratorio indicando si el mismo es positivo, negativo o cero.
+Importante: Verifique que el programa emita UN SOLO CARTEL*/
+
+int main(){
+int numero, positivo, negativo, cero;
+
+cout << "Ingresar un numero: ";
+cin >> numero;
+
+if (numero > 0){
+       cout << "Tu numero es positivo";
+}else if(numero < 0){
+        cout << "Tu numero es negativo";
+}else{
+ cout << "Tu numero es cero";
+}
+
+return 0;
+}
