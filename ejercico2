@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar por teclado un número y luego informar por
+pantalla con un cartel aclaratorio si el mismo es par o impar*/
+
+int main(){
+int numero;
+
+cout << "Ingresa un numero :";
+cin >> numero;
+
+if(numero % 0){
+
+    cout << "Tu numero es par";
+}else{
+cout << "Tu numero es impar";
+}
+
+
+return 0;
+}
