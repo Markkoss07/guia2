@@ -1,0 +1,79 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar cinco números y listar cuantos de esos cinco
+números son positivos, cuantos son negativos y cuantos son iguales a 0*/
+
+int main(){
+int nro1, nro2, nro3, nro4, nro5, positivo, negativo, ceros, numero;
+
+//cout << "Ingresar numero 1: ";
+//cin >> numero;
+
+cout << "Ingresar numero 1: ";
+cin >> nro1;
+cout << "Ingresar numero 2: ";
+cin >> nro2;
+cout << "Ingresar numero 3: ";
+cin >> nro3;
+cout << "Ingresar numero 4: ";
+cin >> nro4;
+cout << "Ingresar numero 5: ";
+cin >> nro5;
+
+
+
+if(nro1 > 0){
+     positivo++;;
+}else if(nro1 < 0){
+    negativo++;
+}else {
+    ceros++;
+}
+if(nro2 > 0){
+     positivo++;;
+}else if(nro2 < 0){
+    negativo++;
+}else {
+    ceros++;
+}
+if(nro3 > 0){
+     positivo++;;
+}else if(nro3 < 0){
+    negativo++;
+}else {
+    ceros++;
+}
+if(nro4 > 0){
+     positivo++;;
+}else if(nro4 < 0){
+    negativo++;
+}else {
+    ceros++;
+}
+if(nro5 > 0){
+     positivo++;;
+}else if(nro5 < 0){
+    negativo++;
+}else {
+    ceros++;
+}
+
+cout << "Positivos" << positivo << endl;
+cout << "Negativo" << negativo << endl;
+cout << "Cero" << ceros << endl;
+
+
+/*if(nro1 > 0){
+     positivo++;
+    cout << "Hay " << positivo << " positivo";
+}else if(nro1,nro2, nro3, nro4, nro5 < 0){
+    nro1,nro2, nro3, nro4, nro5 = negativo++;
+    cout << "Hay " << negativo << " Negativo";
+}else {
+    nro1,nro2, nro3, nro4, nro5 = ceros++;
+    cout << "Hay " << ceros << " Cero";
+}*/
+
+return 0;
+}
