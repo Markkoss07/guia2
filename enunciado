@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    string nombre;
+    float precioUnitario, cuantoAbona, importeApagar, vuelto,desc;
+    int cantidadVendidas;
+
+    cout << "Ingrese nombre del producto: ";
+    cin >> nombre;
+    cout << "Valor de producto: ";
+    cin >> precioUnitario;
+    cout << "Cantidad vendida: ";
+    cin >> cantidadVendidas;
+    cout << "Con cuanto abona? ";
+    cin >> cuantoAbona;
+
+    importeApagar = precioUnitario * cantidadVendidas;
+//vuelto = cuantoAbona - importeApagar;
+
+    cout << "Producto: " << nombre << endl
+         << "Precio unitario: " << precioUnitario << endl
+         << "Unidades: " << cantidadVendidas << endl
+         << "Abona con: " << cuantoAbona<< endl;
+
+    /*cout << "El importe a pagar es: " << importeApagar << endl
+    << "Su vuelto es: " << vuelto << endl;*/
+
+    if (importeApagar >= 10000)
+    {
+        desc = importeApagar * 0.25f;
+    }
+    else if (importeApagar >= 5000)
+    {
+        desc = importeApagar * 0.10f;
+
+    }
+    else if(importeApagar >= 2500)
+    {
+        desc = importeApagar * 0.05f;
+
+    }
+    if (desc>2000)
+    {
+
+        desc=2000;
+    }
+
+    importeApagar=importeApagar-desc;
+
+    if(vuelto>=0)
+    {
+        vuelto = cuantoAbona - importeApagar;
+
+    }
+
+
+
+
+
+    cout << "Su importe a pagar es: "<< importeApagar<< endl;
+
+cout << "El descuento es de: "<< desc;
+    cout << endl << "Su vuelto es: " << vuelto << endl;
+
+    return 0;
+}
