@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int numero1, numero2;
+
+cout << "Ingresar el primer numero: ";
+cin >> numero1;
+cout << "Ingresar el segundo numero: ";
+cin >> numero2;
+
+if (numero1 % numero2 == 0){
+    cout << "El numero " << numero1 << " es multiplo de " << numero2;
+}else{
+    cout << "El numero " << numero1 << " NO es multiplo de " << numero2;
+}
+
+return 0;
+}
