@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+/* un negocio de perfumería efectúa descuentos según el importe de la venta.
+- Si el importe es menor a $100 aplicar un descuento del 5%
+- Si el importe es entre $100 y hasta $500 aplicar un descuento del 10%
+- Si el importe es mayor a $500 aplicar un descuento del 15%
+Hacer un programa donde se ingresa el importe original sin descuento y se
+informe por pantalla el importe con el descuento ya aplicado.*/
+
+int main(){
+int importeOriginal, descuentoAplicado;
+float descuentoMenor, descuentoMedio, descuentoMayor;
+
+cout << "Ingresar el valor de venta: ";
+cin >> importeOriginal;
+
+if (importeOriginal < 100){
+    descuentoMenor = importeOriginal * 0.95f;
+    cout << "El importe de la venta con el descuento es: " << descuentoMenor << endl;
+}else if(importeOriginal >= 100 && importeOriginal <= 500){
+    descuentoMedio = importeOriginal * 0.90f;
+     cout << "El importe de la venta con el descuento es: " << descuentoMedio << endl;
+}else{
+    descuentoMayor = importeOriginal * 0.85f;
+    cout << "El importe de la venta con el descuento es: " << descuentoMayor << endl;
+}
+
+return 0;
+}
