@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int horas;
+    char lenguaje;
+    bool urgente;
+    int valorHora;
+    float costoTotal;
+
+    cout << "Ingrese la cantidad de horas: ";
+    cin >> horas;
+
+    cout << "Ingrese el tipo de lenguaje (C, #, P, G): ";
+    cin >> lenguaje;
+
+    cout << "¿El proyecto es urgente? (1 = Si, 0 = No): ";
+    cin >> urgente;
+
+    switch (lenguaje) {
+
+        case 'C':
+            valorHora = 7500;
+            break;
+
+        case '#':
+            valorHora = 6100;
+            break;
+
+        case 'P':
+            valorHora = 5400;
+            break;
+
+        case 'G':
+            valorHora = 5000;
+            break;
+
+        default:
+            cout << "Lenguaje no valido";
+            return 0;
+    }
+
+    costoTotal = horas * valorHora;
+
+    if (urgente) {
+        costoTotal = costoTotal * 2.20;
+    }
+
+    cout << "El costo total del proyecto es: $" << costoTotal;
+
+    return 0;
+}
