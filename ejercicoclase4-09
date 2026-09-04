@@ -1,0 +1,100 @@
+#include <iostream>
+using namespace std;
+
+/*hacer un programa en donde se ingresen 5 numeros y muestre cuales de ellos son divisibles por 3, solo se puede usar una variable.
+*/
+
+int main(){
+/*int nro1, nro2, nro3, nro4, nro5;
+
+cout << "Ingrese un numero: ";
+cin >> nro1;
+cout << "Ingrese un numero: ";
+cin >> nro2;
+cout << "Ingrese un numero: ";
+cin >> nro3;
+cout << "Ingrese un numero: ";
+cin >> nro4;
+cout << "Ingrese un numero: ";
+cin >> nro5;
+
+if(nro1 % 3 == 0){
+    cout << nro1 << " es divisible" << endl;
+}
+if(nro2 % 3 == 0){
+    cout << nro2 << " es divisible" << endl;
+}
+if(nro3 % 3 == 0){
+    cout << nro3 << " es divisible" << endl;
+}
+if(nro4 % 3 == 0){
+    cout << nro4 << " es divisible" << endl;
+}
+if(nro5 % 3 == 0){
+    cout << nro5 << " es divisible" << endl;
+}*/
+
+            //Ejercicio con solo una variable
+int numero;
+
+//Primer pedido
+cout << "Ingrese un numero: ";
+cin >> numero;
+
+if(numero % 3 == 0){
+    cout << numero << " es divisible" << endl;
+}
+//segundo pedido
+cout << "Ingrese un numero: ";
+cin >> numero;
+
+if(numero % 3 == 0){
+    cout << numero << " es divisible" << endl;
+}
+
+//tercer pedido
+
+cout << "Ingrese un numero: ";
+cin >> numero;
+
+if(numero % 3 == 0){
+    cout << numero << " es divisible" << endl;
+}
+
+//Cuarto pedido
+cout << "Ingrese un numero: ";
+cin >> numero;
+
+if(numero % 3 == 0){
+    cout << numero << " es divisible" << endl;
+}
+
+//Quinto pedido
+cout << "Ingrese un numero: ";
+cin >> numero;
+
+if(numero % 3 == 0){
+    cout << numero << " es divisible" << endl;
+}
+
+//ESTE ES OTRO CASO DONDE SE USA FOR para simplificar el codigo(automatizar)
+/*la variable de control, se encarga de controlar el ciclo repetitivo
+//estructura de repetición, existen dos: exacta e inexacta.
+//exacta se puede repetir reiteradas veces: FOR.
+// la inexacta no sabemos cuanto sabemos que tenemos que parar
+
+*/
+
+
+int numero;
+
+/*for (int i = 1; i <= 5; i++){
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+
+    if(numero % 3 == 0){
+        cout << numero << " es divisible" << endl;
+    }
+}*/
+return 0;
+}
