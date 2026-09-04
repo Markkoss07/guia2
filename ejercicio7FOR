@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main (){
+int numero;
+int maximo = 0;
+
+for(int i = 1; i <=4; i++){
+    cout << "Ingrese primer numero: ";
+    cin >> numero;
+    if(numero > maximo){
+        maximo = numero;
+    }
+}
+
+cout << "el maximo es " << maximo << endl;
+
+return 0;
+}
