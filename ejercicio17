@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar por teclado cuatro números. Si los valores que
+se ingresaran están ordenados en forma creciente, emitir el mensaje “Conjunto
+Ordenado”, caso contrario emitir el mensaje: “Conjunto Desordenado”.
+Ejemplo A: si los números que se ingresan son 8, 10, 12 y 14, entonces están
+ordenados.
+*/
+
+int main (){
+int numero, numeroAnterior;
+int numeroOrdenado = true;
+
+for (int i = 1; i <= 4; i++){
+    cout << "Ingresar su numero " << i << ": " << endl;
+    cin >> numero;
+
+    if (numero < numeroAnterior){
+        numeroOrdenado = false;
+    }
+    numeroAnterior = numero;
+}
+
+if (numeroOrdenado == true){
+    cout << "Conjunto Ordenado";
+}else{
+    cout << "Conjunto Desordenado";
+}
+
+
+
+return 0;
+}
