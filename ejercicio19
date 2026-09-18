@@ -1,0 +1,33 @@
+#include <iostream>
+//#include <algorithm> 
+using namespace std;
+
+/*Hacer un programa para ingresar cinco números y listar el máximo y el mínimo
+de ellos.
+*/
+
+int main (){
+int numero, maximo, minimo;
+
+for (int i = 1; i <= 5; i++){
+    cout << "Ingresar un numero: ";
+    cin >> numero;
+    if(i == 1){
+        numero == maximo;
+        numero == minimo;
+    }
+    if(numero > maximo){
+        maximo = numero;
+    }
+
+    if (numero < minimo){
+        minimo = numero;
+    }
+}
+
+
+cout << "El mayor numero es: " << maximo << endl;
+cout << "El menor numero es: " << minimo << endl;
+
+return 0;
+}
