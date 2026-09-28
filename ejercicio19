@@ -13,8 +13,8 @@ for (int i = 1; i <= 5; i++){
     cout << "Ingresar un numero: ";
     cin >> numero;
     if(i == 1){
-        numero == maximo;
-        numero == minimo;
+        maximo = numero;
+        minimo = numero;
     }
     if(numero > maximo){
         maximo = numero;
