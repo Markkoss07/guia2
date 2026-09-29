@@ -1,0 +1,60 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+/*Hacer un programa en el que se ingrese la edad y altura de 5 personas. Luego,
+calcular e informar:
+- La cantidad de personas mayores a 30 años que midan más de 1.8
+metros.
+- El promedio de altura de las personas mayores a 30 años.
+- La cantidad de personas con altura entre 1.7 y 1.8 (ambos inclusive)
+- La cantidad de personas cuya edad sea de 20, 30 o 40 años.
+*/
+
+int main(){
+int edad, mayoresAltos = 0, cantidadAltura = 0, cantidadEdad = 0, cantidadMas30 = 0;
+float altura, sumaAlturas = 0;
+
+for (int i = 1; i <= 3; i++){
+    cout << "Ingrese la edad de la persona " << i << ": " << endl;
+    cin >> edad;
+
+    cout << "Ingrese la altura de la persona " << i << ": " << endl;
+    cin >> altura;
+
+    //mayores a 30 años que midan más de 1.80
+    if(edad > 30 && altura > 1.80){
+        mayoresAltos++;
+    }
+    //Promedio de altura de mayores de 30
+    if(edad > 30){
+        sumaAlturas = sumaAlturas + altura;
+        cantidadMas30++;
+    }
+    //cantidad de altura entre 1.70  y 1.80
+    if(altura >= 1.70 && altura <= 1.80){
+        cantidadAltura++;
+    }
+    //edad 20, 30 o 40
+    if(edad == 20 || edad == 30 || edad == 40){
+        cantidadEdad++;
+    }
+
+}
+
+cout << "Cantidad de personas que tengas de 30 anios y midan mas de 1.80m: " << mayoresAltos << endl;
+
+if (cantidadMas30 > 0) {
+    cout << "Promedio de altura de las personas mayores a 30 anios: " << fixed << setprecision(2)
+    << sumaAlturas / cantidadMas30 << "%"<< endl;
+}else{
+    cout << "No hay personas mayores a 30 anios." << endl;
+}
+
+cout << "Cantidad de personas con altura entre 1.7 y 1.8 metros: " << cantidadAltura << endl;
+
+cout << "Cantidad de personas con edad 20, 30 o 40 anios: " << cantidadEdad << endl;
+
+
+return 0;
+}
