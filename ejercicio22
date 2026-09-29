@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+/*Una fábrica de caramelos raros dispone de un presupuesto inicial para
+inaugurar su sucursal en Pueblo Paleta. Se sabe que para producir caramelos
+tienen los siguientes costos:
+- Costo de alquiler de $10000
+- Costo por caramelo producido de $2.50
+- Costo por mantenimiento cada 100 caramelos de $5000
+Dados el presupuesto inicial y la cantidad de caramelos a producir el primer
+mes, informar:
+- "El presupuesto es suficiente para cubrir los costos de $XXXX"
+- "El presupuesto no es suficiente, necesita un crédito de $XXXX"
+*/
+
+int main (){
+int cantCaramelos, presupuestoInicial, costoProduccion, costoMantenimiento, costoTotal, credito;
+const int COSTO_ALQUILER = 10000;
+const int POR_CIEN_CARAMELO = 5000;
+const float COSTO_POR_CARAMELO = 2.5;
+
+cout << "Ingrese el presupuesto inicial: " << endl;
+cin >> presupuestoInicial;
+cout << "Ingrese la cantidad de caramelos para producir: "<< endl;
+cin >> cantCaramelos;
+
+costoProduccion = (float) cantCaramelos * COSTO_POR_CARAMELO;
+costoMantenimiento = (float) (cantCaramelos / 100) * POR_CIEN_CARAMELO;
+
+costoTotal = COSTO_ALQUILER + costoProduccion + costoMantenimiento;
+credito = costoTotal - presupuestoInicial;
+if(presupuestoInicial >= costoTotal){
+    cout << "El presupuesto es suficiente para cubrir los costos de $" << costoTotal << endl;
+}else{
+    cout << "El presupuesto no es suficiente, necesita un credito de $" << credito <<endl;
+}
+
+
+return 0;
+}
