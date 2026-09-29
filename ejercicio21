@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar tres números diferentes y determinar e
+informar el número del medio.
+Sugerimos probar CADA UNA de las siguientes 6 combinaciones.
+N1=8, N2=6, N3=10. Valor del medio: 8. N1=8, N2=10, N3=6. Valor del medio: 8
+N1=6, N2=8, N3=10. Valor del medio: 8. N1=10, N2=8, N3=6. Valor del medio: 8
+*/
+
+int main(){
+int nro1, nro2, nro3;
+
+cout << "Ingresar numero 1: " << endl;
+cin >> nro1;
+cout << "Ingresar numero 2: " << endl;
+cin >> nro2;
+cout << "Ingresar numero 3: " << endl;
+cin >> nro3;
+
+if ((nro1 > nro2 && nro1 < nro3) || (nro1 < nro2 && nro1 > nro3)){
+    cout << "El valor del medio es: " << nro1 << endl;
+}else if ((nro2 > nro1 && nro2 < nro3) || (nro2 < nro1 && nro2 > nro3)){
+    cout << "El valor del medio es: " << nro2 << endl;
+}else{
+    cout << "El valor del medio es: " << nro3 << endl;
+}
+
+return 0;
+}
