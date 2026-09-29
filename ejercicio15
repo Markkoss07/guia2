@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+/*Hacer un programa para ingresar por teclado tres números e informar con una
+leyenda aclaratoria si los tres son todos distintos entre sí, caso contrario no
+emitir nada.
+Tener en cuenta: Si A es distinto de B y B es distinto de C, eso no significa que A
+y C sean distintos. Ejemplo: A=8, B=6 y C=8.
+
+*/
+
+int main(){
+int nro1, nro2, nro3;
+
+cout << "Ingresar numero: " << nro1 << endl;
+cin >> nro1;
+cout << "Ingresar numero: " << nro2 << endl;
+cin >> nro2;
+cout << "Ingresar numero: " << nro3 << endl;
+cin >> nro3;
+
+if (nro1 != nro2 && nro1 != nro3 && nro2 != nro3){
+    cout << "Son distintos entre si" << endl;
+}else{
+    cout << "Hay mas de un numero igual " << endl;
+}
+
+return 0;
+}
