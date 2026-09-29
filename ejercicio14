@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+/*Una marroquinería dispone de 45 carteras blancas, 50 carteras negras, 40
+marrones y 49 grises. Se pide hacer un programa donde se ingresen tres
+ventas. Cada venta está compuesta por:
+- Cantidad de carteras
+- Tipo de cartera (1 - Blanco, 2 - Negro, 3- Marrón, 4 - Gris)
+Calcular e informar:
+- Cantidad total de carteras vendidas en total.
+- Cuántas carteras quedaron de cada tipo.
+- Los colores de carteras que no se vendieron.
+NOTA: Ninguna venta superará las 10 carteras.
+*/
+
+int main(){
+int cantCarteras, tipoCarteras, totalVendido = 0;
+int carteraBlanca = 45, carteraNegra = 50, carteraMarrones = 40, carteraGris = 49;
+int vendidoBlanca = 0, vendidoNegra = 0, vendidoMarrones = 0, vendidoGris = 0;
+bool ningunaSinVender = true;
+
+for (int i = 1; i <= 3; i++){
+    cout << "Ingresar la cantidad de carteras compradas: " << endl;
+    cin >> cantCarteras;
+    cout << "Tipo de cartera (1-Blanco, 2-Negro, 3-Marron, 4-Gris): " << endl;
+    cin >> tipoCarteras;
+
+    switch(tipoCarteras){
+    case 1:
+        carteraBlanca -= cantCarteras;
+        vendidoBlanca += cantCarteras;
+    break;
+    case 2:
+        carteraNegra -= cantCarteras;
+        vendidoNegra += cantCarteras;
+    break;
+    case 3:
+        carteraMarrones -= cantCarteras;
+        vendidoMarrones += cantCarteras;
+    break;
+    case 4:
+        carteraGris -= cantCarteras;
+        vendidoGris += cantCarteras;
+    break;
+    }
+    totalVendido += cantCarteras;
+}
+
+cout << "Cantidad de carteras vendidas: " << totalVendido << endl;
+
+cout << "Carteras blancas quedaron: " << carteraBlanca << endl;
+cout << "Carteras negras quedaron: " << carteraNegra << endl;
+cout << "Carteras marrones quedaron: " << carteraMarrones << endl;
+cout << "Carteras grises quedaron: " << carteraGris << endl;
+
+if (vendidoBlanca == 0) {
+    cout << "Blanco ";
+    ningunaSinVender = false;
+}
+if (vendidoNegra == 0) {
+    cout << "Negro ";
+    ningunaSinVender = false;
+}
+if (vendidoMarrones == 0) {
+    cout << "Marron ";
+    ningunaSinVender = false;
+}
+if (vendidoGris == 0) {
+    cout << "Gris ";
+    ningunaSinVender = false;
+}
+if (ningunaSinVender) {
+    cout << "(se vendieron todos los colores)";
+}
+
+
+return 0;
+}
